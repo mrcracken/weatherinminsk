@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="card">
+    <div class="front">
+      <h1>{{weatherData.name}}</h1>
+      <p>{{weatherData.dt}}</p>
+      <p class="quickTemperature">{{weatherData.main.temp-273.15}}<span>C</span></p>
+    </div>
+    <div class="right">
+      <h2>{{weatherData.name}}</h2>
+      <ul>
+        <li><span>Temperature: </span>{{weatherData.main.temp-273.15}}<span>C</span></li>
+        <!-- <li>{{weatherData.weather.main}}</li>
+        <li>{{weatherData.weather.description}}</li> -->
+        <li><span>Wind Speed:  </span>{{weatherData.wind.speed}}<span>m/ph</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="img-wrapper" *ngIf="weatherData">
+       <img src='../../assets/sun_icon.png' alt=''>    
+  </div>
+</div>
